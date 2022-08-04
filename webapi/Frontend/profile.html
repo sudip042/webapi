@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin Area</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<style>
+    .navbar-nav .nav-item a.nav-link {
+        color: white;
+    }
+
+    .active {
+        border-bottom: 2px solid black;
+    }
+</style>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary text-white"
+            style="position: fixed; width: 100%; z-index: 100; top:0">
+
+            <i class="fa fa-gear fa-2x d-md-block d-none"></i><a href="dashboard.html" class="text-white mt-1 ml-1">
+                <h3> Book Car Servicing</h3>
+            </a>
+
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item px-2">
+                        <a href="dashboard.html" class="nav-link">Dashboard</a>
+                    </li>
+                    <li class="nav-item px-2 active">
+                        <a href="addcars.html" class="nav-link">Add Cars</a>
+                    </li>
+                    <li class="nav-item px-2 active">
+                        <a href="addparts.html" class="nav-link">Add Parts</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a href="profile.html" class="nav-link">Profile</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a href="bookdetails.html" class="nav-link">Book Details</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mr-3">
+                        <a href="dashboard.html" class="nav-link" data-toggle="dropdown">
+                            <i class="fa fa-user"></i> Welcome Admin
+                        </a>
+
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-info" id="logout"><i
+                                class="fa fa-user-times"></i>Logout</button>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container-fluid py-4 my-5 bg-light">
+        <h2 class="text-center">Fetch All Profile Datas Here</h2>
+        <table class="table table-hover table-striped table-bordered" id="profiledetails">
+            <thead>
+
+                <tr>
+                    <th>ID</th>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Address</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>Confirm Password</th>
+                    <th>Usertype</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+            </tbody>
+        </table>
+    </section>
+    <script src="bootstrap-3.4.1-dist/js/jquery-3.4.1.min.js"></script>
+
+    <!--PROFILE DETAILS SCRIPT -->
+    <script src="./controller/profile.js"></script>
+    <script src="./controller/logout.js"></script>
+</body>
+
+</html>
